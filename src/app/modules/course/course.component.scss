@@ -1,0 +1,13 @@
+.lesson-sidebar {
+  flex: 1 1 auto;
+  overflow: hidden;
+}
+
+@media (max-width: 992px) {
+  .player > .row {
+    display: flex;
+    flex-flow: column;
+  }
+}
+
+

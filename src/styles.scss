@@ -1,0 +1,19 @@
+$primary: #4278ff;
+
+$accordion-button-active-bg: #fff;
+$accordion-body-padding-y: 0;
+$accordion-body-padding-x: 0;
+
+$list-group-bg: #ececec;
+$list-group-hover-bg: #b3bfd7;
+.list-group-item-action {
+  cursor: pointer;
+}
+
+@import "~bootstrap/scss/bootstrap";
+
+body {
+  height: 100vh;
+  padding-top: 66px;
+  background: #f1f1f1;
+}

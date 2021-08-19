@@ -1,0 +1,27 @@
+<div class="bg-white" style="overflow-y: scroll;height: 100%">
+  <div class="p-2">
+    <input type="text" class="form-control" placeholder="Поиск" [(ngModel)]="search">
+  </div>
+  <mdb-accordion [flush]="true" [multiple]="true">
+    <mdb-accordion-item
+      [appScrollIntoView]="lesson.id === selectedVideoId"
+      *ngFor="let lesson of playListService.lessons | async | searchLessons: search"
+      [collapsed]="!search && lesson.id !== selectedVideoId"
+      class="d-block"
+    >
+      <ng-template mdbAccordionItemHeader>{{lesson.title}}</ng-template>
+      <ng-template mdbAccordionItemBody>
+        <div class="list-group">
+          <ng-container *ngFor="let marker of lesson.markers; let i = index">
+            <a class="list-group-item list-group-item-action"
+              [class.active]="lesson.id === selectedVideoId && i === selectedTitle"
+              (click)="selectVideo(lesson.id, marker.time, i)"
+            >
+              {{marker.text}}
+            </a>
+          </ng-container>
+        </div>
+      </ng-template>
+    </mdb-accordion-item>
+  </mdb-accordion>
+</div>

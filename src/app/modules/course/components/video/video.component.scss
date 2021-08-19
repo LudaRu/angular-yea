@@ -1,0 +1,18 @@
+@import '~video.js/dist/video-js.css';
+@import '~@videojs/themes/dist/forest/index.css';
+
+.vjs-theme-forest {
+  --vjs-theme-forest--primary: #4278ff;
+}
+
+.video-js .vjs-progress-control:hover .vjs-time-tooltip, .video-js .vjs-progress-control:hover .vjs-progress-holder:focus .vjs-time-tooltip, .vjs-remaining-time-display {
+  font-size: 1.2em;
+}
+
+.player-wrapper {
+  height: 100%;
+  background: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
