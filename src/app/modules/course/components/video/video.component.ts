@@ -1,4 +1,13 @@
-import {Component, ElementRef, Input, OnDestroy, OnInit, ViewChild, ViewEncapsulation} from '@angular/core';
+import {
+  ChangeDetectionStrategy,
+  Component,
+  ElementRef,
+  Input,
+  OnDestroy,
+  OnInit,
+  ViewChild,
+  ViewEncapsulation
+} from '@angular/core';
 import videojs, {VideoJsPlayerOptions} from 'video.js';
 import {PlayListService} from "../../services/play-list.service";
 import {ActivatedRoute} from "@angular/router";
@@ -7,6 +16,7 @@ import {ActivatedRoute} from "@angular/router";
   selector: 'app-video',
   templateUrl: './video.component.html',
   styleUrls: ['./video.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush,
   encapsulation: ViewEncapsulation.None,
 })
 export class VideoComponent implements OnInit, OnDestroy {

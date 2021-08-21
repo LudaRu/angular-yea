@@ -14,7 +14,7 @@ import {SearchLessonsPipe} from './pipes/search-lessons.pipe';
 import {FormsModule} from "@angular/forms";
 import {MdbAccordionModule} from "mdb-angular-ui-kit/accordion";
 import {PreviewComponent} from './components/preview/preview.component';
-import { ScrollIntoViewDirective } from './scroll-into-view.directive';
+import { ScrollIntoViewDirective } from '../../directives/scroll-into-view.directive';
 
 @NgModule({
   declarations: [

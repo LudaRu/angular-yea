@@ -1,4 +1,13 @@
-import {AfterViewInit, Component, OnDestroy, OnInit, QueryList, ViewChild, ViewChildren} from '@angular/core';
+import {
+  AfterViewInit,
+  ChangeDetectionStrategy,
+  Component,
+  OnDestroy,
+  OnInit,
+  QueryList,
+  ViewChild,
+  ViewChildren
+} from '@angular/core';
 import {PlayListService} from "../../services/play-list.service";
 import {ActivatedRoute} from "@angular/router";
 import {Subscription} from "rxjs";
@@ -6,6 +15,7 @@ import {Subscription} from "rxjs";
 @Component({
   selector: 'app-lessons-list',
   templateUrl: './lessons-list.component.html',
+  changeDetection: ChangeDetectionStrategy.OnPush,
   styleUrls: ['./lessons-list.component.scss']
 })
 export class LessonsListComponent implements OnInit, AfterViewInit, OnDestroy {
